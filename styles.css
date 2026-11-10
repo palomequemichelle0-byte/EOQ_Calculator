@@ -1,0 +1,737 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fc;
+    color: #19324d;
+}
+
+.encabezado {
+    background: white;
+    min-height: 75px;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(20, 55, 90, 0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #173b63;
+}
+
+.logo-icono {
+    background: #2476c7;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.encabezado nav {
+    display: flex;
+    gap: 30px;
+}
+
+.encabezado nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.encabezado nav a:hover {
+    color: #2476c7;
+}
+
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+.bienvenida {
+    background: linear-gradient(120deg, #123b68, #267ac5);
+    border-radius: 22px;
+    padding: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    color: white;
+    min-height: 330px;
+}
+
+.bienvenida-texto {
+    max-width: 600px;
+}
+
+.etiqueta {
+    color: #8fcaff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.bienvenida h1 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.bienvenida-texto p {
+    color: #dcecff;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.boton-principal {
+    display: inline-block;
+    background: white;
+    color: #1b5f9e;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.bienvenida-visual {
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    padding: 35px;
+    text-align: center;
+    min-width: 230px;
+}
+
+.visual-icono {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.bienvenida-visual h3 {
+    margin-bottom: 10px;
+}
+
+.bienvenida-visual p {
+    color: #dcecff;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.modelos {
+    margin-top: 65px;
+}
+
+.titulo-seccion {
+    margin-bottom: 28px;
+}
+
+.titulo-seccion .etiqueta {
+    color: #2476c7;
+}
+
+.titulo-seccion h2 {
+    font-size: 28px;
+    margin: 12px 0 8px;
+}
+
+.titulo-seccion p {
+    color: #8291a5;
+    font-size: 14px;
+}
+
+.contenedor-modelos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    border: 1px solid #e6edf5;
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(32, 85, 140, 0.10);
+    border-color: #b8d9f7;
+}
+
+.tarjeta-icono {
+    background: #eaf4ff;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: #8291a5;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 88px;
+}
+
+.tarjeta button {
+    background: #2476c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tarjeta button:hover,
+.boton-calcular:hover {
+    background: #185b9c;
+}
+
+.historial {
+    background: white;
+    border: 1px solid #e6edf5;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 55px;
+}
+
+.historial h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.historial p {
+    color: #8291a5;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #8291a5;
+    font-size: 12px;
+}
+
+/* FORMULARIOS DE LA CALCULADORA */
+
+.calculadora {
+    background: white;
+    border: 1px solid #e1eaf4;
+    border-radius: 18px;
+    padding: 35px;
+    margin-top: 45px;
+    scroll-margin-top: 25px;
+    box-shadow: 0 8px 25px rgba(32, 85, 140, 0.05);
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #193b5d;
+}
+
+.campo input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d8e3ef;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #2476c7;
+    box-shadow: 0 0 0 3px #eaf4ff;
+}
+
+.campo small {
+    color: #8291a5;
+    font-size: 12px;
+}
+
+.boton-calcular {
+    background: #2476c7;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.resultados {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f4f8fd;
+    border-radius: 12px;
+    color: #64748b;
+}
+
+@media (max-width: 1000px) {
+    .contenedor-modelos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bienvenida {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .encabezado {
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .encabezado nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 25px 16px;
+    }
+
+    .bienvenida {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 23px;
+    }
+
+    .bienvenida-visual {
+        width: 100%;
+    }
+
+    .contenedor-modelos,
+    .formulario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta p {
+        min-height: auto;
+    }
+
+    .calculadora {
+        padding: 22px;
+    }
+}
+
+.grafica {
+    display: block;
+    width: 100%;
+    height: 260px;
+    margin: 20px 0 35px;
+    background: #ffffff;
+    border: 1px solid #e6edf5;
+    border-radius: 12px;
+}
+/* Contenedor de gráficas */
+.graficas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+/* Tarjetas de gráficas */
+.grafica {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.grafica h4 {
+    color: #1e3a8a;
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+
+.grafica canvas {
+    width: 100%;
+    height: 260px;
+    display: block;
+}
+
+/*CELULARES */
+@media (max-width: 700px) {
+    .graficas {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== RESULTADOS EOQ ===== */
+
+.resultados {
+    margin-top: 30px;
+    padding: 28px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+}
+
+.resultados h2 {
+    color: #173b67;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.resultados h3 {
+    color: #1e4775;
+    font-size: 19px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+}
+
+.resultados h4 {
+    color: #234d79;
+    margin-bottom: 16px;
+}
+
+.resultados p {
+    color: #475569;
+    line-height: 1.7;
+    margin: 8px 0;
+}
+
+.resultados p strong {
+    color: #174a80;
+}
+
+/* Tarjetas de gráficas */
+
+.graficas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin: 22px 0;
+}
+
+.grafica {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 0;
+    box-shadow: 0 5px 18px rgba(30, 64, 100, 0.06);
+}
+
+.grafica canvas,
+.resultados canvas {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+/* Gráficas individuales */
+
+#resultados > canvas.grafica {
+    height: 260px;
+    margin: 15px 0 25px;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 700px) {
+    .resultados {
+        padding: 18px;
+    }
+
+    .resultados h2 {
+        font-size: 22px;
+    }
+
+    .graficas {
+        grid-template-columns: 1fr;
+    }
+
+    .grafica {
+        padding: 14px;
+    }
+}
+
+/* =====================================
+   RESULTADOS PROFESIONALES EOQ
+===================================== */
+
+.resultados {
+    margin-top: 30px;
+    padding: 28px;
+    background: #f5f8fc;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.resultados h2 {
+    color: #173b67;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.resultados h3 {
+    color: #1e4775;
+    font-size: 20px;
+    margin: 30px 0 16px;
+}
+
+.resultado-principal {
+    background: linear-gradient(135deg, #173b67, #2563a6);
+    color: white;
+    border-radius: 18px;
+    padding: 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.resultado-principal span {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.resultado-principal strong {
+    font-size: clamp(42px, 7vw, 62px);
+    line-height: 1.1;
+    color: white;
+}
+
+.resultado-principal small {
+    font-size: 15px;
+    color: #dbeafe;
+}
+
+.tarjetas-costos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.tarjeta-costo {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 14px rgba(30, 64, 100, 0.04);
+}
+
+.tarjeta-costo span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.tarjeta-costo strong {
+    color: #1e4775;
+    font-size: 22px;
+}
+
+.tarjeta-costo.costo-total {
+    background: #eaf2fc;
+    border-color: #bfdbfe;
+}
+
+.procedimiento,
+.interpretacion {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.procedimiento p,
+.interpretacion {
+    color: #475569;
+    line-height: 1.8;
+}
+
+.graficas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.grafica {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 0;
+    box-shadow: 0 5px 18px rgba(30, 64, 100, 0.05);
+}
+
+.grafica h4 {
+    color: #1e4775;
+    margin: 0 0 15px;
+    font-size: 16px;
+}
+
+.grafica canvas {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.grafica-amplia {
+    margin: 15px 0 25px;
+}
+
+.boton-imprimir {
+    margin-top: 25px;
+    background: #1e4775;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.boton-imprimir:hover {
+    background: #2563a6;
+}
+
+/* =====================================
+   ADAPTACIÓN A TABLETS Y CELULARES
+===================================== */
+
+@media (max-width: 800px) {
+    .graficas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .resultados {
+        padding: 15px;
+        border-radius: 14px;
+    }
+
+    .resultados h2 {
+        font-size: 22px;
+    }
+
+    .resultados h3 {
+        font-size: 18px;
+    }
+
+    .tarjetas-costos {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-costo {
+        padding: 16px;
+    }
+
+    .resultado-principal {
+        padding: 23px 12px;
+    }
+
+    .grafica {
+        padding: 12px;
+    }
+
+    .formulario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .boton-calcular,
+    .boton-imprimir {
+        width: 100%;
+    }
+}
+
+/* =====================================
+   IMPRESIÓN DE RESULTADOS
+===================================== */
+
+@media print {
+    header,
+    footer,
+    #modelos,
+    #formularioEOQ,
+    .boton-imprimir,
+    .boton-calcular {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+    }
+
+    .resultados {
+        background: white !important;
+        border: none;
+    }
+
+    .grafica,
+    .tarjeta-costo,
+    .procedimiento,
+    .interpretacion {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    .resultado-principal {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}

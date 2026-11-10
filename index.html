@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOQ Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="logo">
+            <span class="logo-icono">EOQ</span>
+            <span>EOQ Calculator</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#modelos">Modelos EOQ</a>
+            <a href="#historial">Historial</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="bienvenida" id="inicio">
+            <div class="bienvenida-texto">
+                <span class="etiqueta">GESTIÓN DE INVENTARIOS</span>
+
+                <h1>Calcula de forma inteligente tu inventario.</h1>
+
+                <p>
+                    Encuentra la cantidad óptima de pedido, reduce costos
+                    y administra tus inventarios mediante los diferentes
+                    modelos EOQ.
+                </p>
+
+                <a href="#modelos" class="boton-principal">
+                    Comenzar cálculo
+                </a>
+            </div>
+
+            <div class="bienvenida-visual">
+                <div class="visual-icono">📦</div>
+                <h3>Control de inventario</h3>
+                <p>Decisiones basadas en cálculos precisos.</p>
+            </div>
+        </section>
+
+        <section class="modelos" id="modelos">
+            <div class="titulo-seccion">
+                <span class="etiqueta">HERRAMIENTAS</span>
+                <h2>Selecciona un modelo EOQ</h2>
+                <p>Elige el modelo que necesitas calcular.</p>
+            </div>
+
+            <div class="contenedor-modelos">
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">📊</div>
+                    <h3>EOQ Básico</h3>
+                    <p>
+                        Determina la cantidad económica de pedido
+                        considerando la demanda y los costos.
+                    </p>
+                    <button onclick="seleccionarModelo('basico')">
+                        Seleccionar →
+                    </button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">📉</div>
+                    <h3>EOQ con faltantes</h3>
+                    <p>
+                        Calcula el inventario óptimo cuando se permiten
+                        pedidos pendientes.
+                    </p>
+                    <button onclick="seleccionarModelo('faltantes')">
+                        Seleccionar →
+                    </button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">🏭</div>
+                    <h3>EOQ de producción</h3>
+                    <p>
+                        Calcula el lote económico cuando los productos
+                        se fabrican internamente.
+                    </p>
+                    <button onclick="seleccionarModelo('produccion')">
+                        Seleccionar →
+                    </button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="tarjeta-icono">⚙️</div>
+                    <h3>Producción con déficit</h3>
+                    <p>
+                        Analiza la producción cuando se permiten
+                        faltantes en el inventario.
+                    </p>
+                    <button onclick="seleccionarModelo('deficit')">
+                        Seleccionar →
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="historial" id="historial">
+            <h2>Historial de cálculos</h2>
+            <p>Tus cálculos recientes aparecerán aquí.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>EOQ Calculator · Herramienta de gestión de inventarios</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
